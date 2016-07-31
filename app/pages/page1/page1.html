@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Tip Tool</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="page1">
+
+  <ion-list>
+    <ion-item>
+      <ion-label primary>Bill Amount $</ion-label>
+      <ion-input #tipInput type="number"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button secondary (click)='calcTip(tipInput.value)'>Calculate Tip</button>
+
+  <p>{{tipAmount}}</p>
+  <p>{{totalAmount}}</p>
+
+</ion-content>
